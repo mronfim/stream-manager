@@ -6,12 +6,17 @@ import ProgressBar from './ProgressBar'
 export default class Console extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            followers: 0,
+        }
     }
 
     render() {
+        let followers = this.props.user.followers || '0'
         let follower = this.props.follower || '???'
         let winCount = this.props.wins || '???'
         let killCount = this.props.kills || '???'
+
         return (
             <div className='console-container'>
                 <div className='console'>
@@ -35,7 +40,7 @@ export default class Console extends React.Component {
                             <span className='dir'>~/RECENT_FOLLOWER</span>
                             <span className='symbol'>$</span>
                             <span id='follower'>{follower}</span>
-                            <ProgressBar label="follower goal" current="10" goal = "25" />
+                            <ProgressBar label="follower goal" current={followers} goal = "25" />
                         </div>
                         <div className='game-stats'>
                             <div className='wins'>Wins <span id='win-count'>[{winCount}]</span></div>

@@ -8,28 +8,28 @@ class Overlay extends React.Component {
     constructor(props) {
         super(props)
         this.socket = io('http://localhost:3000')
+        this.state = {
+            user: {}
+        }
     }
 
     componentDidMount() {
-        this.socket.on('connect', data => console.log(data))
-    }
-
-    componentWillUnmount() {
-
+        this.socket.on('user info', data => {
+            this.setState({
+                ...this.state,
+                user: data,
+            })
+        })
     }
 
     render() {
         return (
             <div className="overlay-container">
                 <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-                <Console />
+                <Console user={this.state.user} />
             </div>
         )
     }
-}
-
-Overlay.defaultProps = {
-
 }
 
 export default Overlay
