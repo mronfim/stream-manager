@@ -35,7 +35,7 @@ export default class Console extends React.Component {
                             <span className='dir'>~/RECENT_FOLLOWER</span>
                             <span className='symbol'>$</span>
                             <span id='follower'>{follower}</span>
-                            <ProgressBar label="follower goal" current="200" goal = "25" />
+                            <ProgressBar label="follower goal" current="10" goal = "25" />
                         </div>
                         <div className='game-stats'>
                             <div className='wins'>Wins <span id='win-count'>[{winCount}]</span></div>

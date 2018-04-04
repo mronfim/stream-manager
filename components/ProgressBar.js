@@ -35,6 +35,7 @@ export default class ProgressBar extends React.Component {
         let percentage = current / goal * 100
         let width = `${ percentage >= 100 ? 100 : percentage }%`
         let right = `${ this.state.right }px`
+        
         return (
             <div
                 ref={progressBar => { this.progressBar = progressBar }}
@@ -50,7 +51,7 @@ export default class ProgressBar extends React.Component {
                     className="progress"
                     style={{ width }}>
 
-                    <div style={{ right }}>
+                    <div>
                         <span className="current">{current}</span>
                         <span className="label">{label}</span>
                         <span className="goal">{goal}</span>

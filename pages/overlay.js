@@ -1,6 +1,9 @@
 import React from 'react'
 import io from 'socket.io-client'
 
+import stylesheet from '../styles/overlay.scss'
+import Console from '../components/Console'
+
 class Overlay extends React.Component {
     constructor(props) {
         super(props)
@@ -17,7 +20,9 @@ class Overlay extends React.Component {
 
     render() {
         return (
-            <div className="overlay">
+            <div className="overlay-container">
+                <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+                <Console />
             </div>
         )
     }
