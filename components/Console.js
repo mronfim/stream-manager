@@ -12,8 +12,8 @@ export default class Console extends React.Component {
     }
 
     render() {
-        let followers = this.props.user.followers || '0'
-        let follower = this.props.follower || '???'
+        let followers = this.props.user.followers || 0
+        let follower = this.props.user.recentFollower || '???'
         let winCount = this.props.wins || '???'
         let killCount = this.props.kills || '???'
 
@@ -39,8 +39,8 @@ export default class Console extends React.Component {
                         <div className='log'>
                             <span className='dir'>~/RECENT_FOLLOWER</span>
                             <span className='symbol'>$</span>
-                            <span id='follower'>{follower}</span>
-                            <ProgressBar label="follower goal" current={followers} goal = "25" />
+                            <span id='follower'>{follower.display_name}</span>
+                            <ProgressBar label="follower goal" current={followers} goal = "15" />
                         </div>
                         <div className='game-stats'>
                             <div className='wins'>Wins <span id='win-count'>[{winCount}]</span></div>

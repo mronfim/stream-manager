@@ -20,6 +20,20 @@ class Overlay extends React.Component {
                 user: data,
             })
         })
+
+        this.socket.on('new follow', data => {
+            let user = this.state.user || {}
+            let followers = user.followers || 0
+
+            this.setState({
+                ...this.state,
+                user: {
+                    ...user,
+                    followers: followers + data.total,
+                    recentFollower: data.recentFollower,
+                }
+            })
+        })
     }
 
     render() {
