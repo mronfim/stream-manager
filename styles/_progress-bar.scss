@@ -1,0 +1,51 @@
+$progress-bg: #141616;
+$accent-yellow: #fffc67;
+
+.progress-bar {
+    position: relative;
+    margin-top: 20px;
+    
+    .info-bg {
+        position: absolute;
+        top: 0; left: 0; right: 0; left: 0;
+        display: flex;
+        justify-content: space-between;
+        background-color: $progress-bg;
+
+        .current,
+        .label,
+        .goal {
+            color: $accent-yellow;
+        }
+    }
+
+    .progress {
+        position: relative;
+        background-color: $accent-yellow;
+        height: 20px;
+        overflow: hidden;
+
+        & > div {
+            position: absolute;
+            top: 0; left: 0; left: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .current,
+        .label,
+        .goal {
+            color: $progress-bg;
+        }
+    }
+
+    .current,
+    .label,
+    .goal {
+        text-transform: uppercase;
+    }
+
+    .label {
+        letter-spacing: 2px;
+    }
+}

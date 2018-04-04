@@ -1,0 +1,103 @@
+$face-cam-width: 1280 / 3; // 427
+$face-cam-height: 720 / 3 + 2;
+
+$console-bg: #212526;
+$face-cam-bg: #780dca;
+$light-grey: #545656;
+$accent-green: #5ffa68;
+$accent-red: #ff6e67;
+$accent-teal: #60fdff;
+$accent-yellow: #fffc67;
+
+.console-container {
+    position: absolute;
+    top: 290px;
+    bottom: 280px;
+    left: 8px;
+
+    .console {
+        color: white;
+        padding: 5px 10px 10px 10px;
+        background-color: $console-bg;
+        font-family: 'Share Tech Mono', monospace;
+        box-shadow: 0px 0px 10px -2px black;
+
+        .header {
+            .ui-buttons {
+                text-align: right;
+            }
+        }
+
+        .face-cam {
+            width: $face-cam-width + 0px;
+            height: $face-cam-height + 0px;
+            background-color: black;
+        }
+
+        .title-container {
+            position: relative;
+            border-color: $light-grey;
+            border-style: solid;
+            border-width: 1px 0px;
+            margin: 12px 0;
+            height: 12px;
+
+            .title {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+
+                .text {
+                    position: absolute;
+                    color: white;
+                    font-size: 24px;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    background-color: $console-bg;
+                    padding: 1px 10px;
+                    top: -9px;
+                    left: 158px;
+                }
+            }
+        }
+
+        .output-screen {
+            font-size: 18px;
+            padding: 5px 5px 5px 5px;
+            border: 1px solid $light-grey;
+
+            .log {
+                padding-bottom: 5px;
+
+                .symbol {
+                    margin: 0 10px;
+                    color: $accent-red;
+                }
+
+                #follower {
+                    color: $accent-teal;
+                }
+            }
+
+            .game-stats {
+                position: relative;
+                border-top: 1px solid $light-grey;
+                padding-top: 5px;
+                margin-top: 5px;
+                 
+                .kills {
+                    position: absolute;
+                    right: 0;
+                    top: 5px;
+                }
+
+                #win-count,
+                #kill-count {
+                    color: $accent-green;
+                }
+            }
+        }
+    }
+}
