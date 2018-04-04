@@ -3,6 +3,8 @@ import io from 'socket.io-client'
 
 import Comp from '../components/Comp'
 
+import stylesheet from '../styles/index.scss'
+
 class Index extends React.Component {
     constructor(props) {
         super(props)
@@ -20,6 +22,7 @@ class Index extends React.Component {
     render() {
         return (
             <div>
+                <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
                 <p>Hello</p>
                 <Comp socket={this.socket} />
             </div>
