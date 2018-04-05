@@ -12,6 +12,7 @@ class Overlay extends Document {
             <html>
                 <Head>
                     {/* <script dangerouslySetInnerHTML={{ __html: stylesheet }}></script> */}
+                    <script src="https://cdn.rawgit.com/coderitual/odoo/feature/codevember16/lib/odoo.js"></script>
                 </Head>
                 <body>
                     <Main />

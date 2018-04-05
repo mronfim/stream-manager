@@ -1,0 +1,38 @@
+$alert-width: 800;
+$alert-height: 300;
+$alert-x: (1920 - $alert-width) / 2;
+$alert-y: 100;
+
+// timing
+$line-width-duration: 400ms;
+$line-offset-duration: 200ms;
+
+.follower-alert {
+    width: $alert-width + 0px;
+    height: $alert-height + 0px;
+    position: absolute;
+    top: $alert-y + 0px;
+    left: $alert-x + 0px;
+
+    // background-color: red;
+
+    .line {
+        position: absolute;
+        height: 4px;
+        top: ($alert-height - 4)/2 + 0px;
+        left: 0px;
+        right: 0px;
+        // background-color: yellow;
+
+        transition: top $line-offset-duration $line-width-duration;
+
+        .line-fill {
+            height: 4px;
+            width: 0px;
+            background-color: black;
+            margin: 0 auto;
+
+            transition: width $line-width-duration 0ms ease-out;
+        }
+    }
+}

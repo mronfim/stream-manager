@@ -3,6 +3,7 @@ import io from 'socket.io-client'
 
 import stylesheet from '../styles/overlay.scss'
 import Console from '../components/Console'
+import FollowerAlert from '../components/FollowerAlert'
 
 class Overlay extends React.Component {
     constructor(props) {
@@ -41,6 +42,7 @@ class Overlay extends React.Component {
             <div className="overlay-container">
                 <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
                 <Console user={this.state.user} />
+                <FollowerAlert />
             </div>
         )
     }
