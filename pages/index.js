@@ -6,11 +6,11 @@ import stylesheet from '../styles/index.scss'
 class Index extends React.Component {
     constructor(props) {
         super(props)
-        this.socket = io('http://localhost:3000')
+        // this.socket = io('http://localhost:3000')
     }
 
     componentDidMount() {
-        this.socket.on('connect', data => console.log(data))
+        // this.socket.on('connect', data => console.log(data))
     }
 
     componentWillUnmount() {
