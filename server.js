@@ -5,8 +5,8 @@ const next = require('next')
 const axios = require('axios')
 const socketIOClient = require('socket.io-client')
 
-const port = process.PORT || 3000
 const dev = process.env.NODE_ENV !== 'production'
+const port = process.env.PORT || 3000
 const nextApp = next({ dev })
 const nextHandler = nextApp.getRequestHandler()
 
