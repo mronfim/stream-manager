@@ -5,7 +5,10 @@
   "author": "Matheus Ronfim",
   "license": "MIT",
   "scripts": {
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "build": "next build",
+    "heroku-postbuild": "npm run build",
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
