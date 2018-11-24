@@ -10,7 +10,7 @@ const dev = process.env.NODE_ENV !== 'production'
 const nextApp = next({ dev })
 const nextHandler = nextApp.getRequestHandler()
 
-const user = 'foreignn_'
+const user = 'ForeignLIVE'
 
 // Socket IO ////////////////////////////////////////////////////
 
